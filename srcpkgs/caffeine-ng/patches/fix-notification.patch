@@ -1,0 +1,23 @@
+diff --git a/caffeine/main.py b/caffeine/main.py
+index cd4f3c6..7bcb771 100644
+--- caffeine/main.py
++++ caffeine/main.py
+@@ -44,6 +44,7 @@ gi.require_version('Gtk', '3.0')  # noqa
+ gi.require_version('Notify', '0.7')  # noqa
+ from docopt import docopt
+ from gi.repository import GdkPixbuf, Gio, GObject, Gtk
++from gi.repository.Notify import init as notify_init
+ from gi.repository.Notify import Notification
+ from setproctitle import setproctitle
+ 
+@@ -194,8 +195,9 @@ class GUI:
+ 
+         if show_tray_icon is False and show_notification is True and \
+            show_preferences is False:
++            notify_init("caffeine-ng")
+             note = \
+-                Notification(_("Caffeine is running"),
++                Notification.new(_("Caffeine is running"),
+                              _("To show the tray icon, \nrun ") +
+                              "'caffeine -p' " +
+                              _("or open Caffeine Preferences from " +
