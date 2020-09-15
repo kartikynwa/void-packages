@@ -1,0 +1,16 @@
+# Template file for 'gImageReader'
+pkgname=gImageReader
+version=3.3.1
+revision=1
+build_style=cmake
+hostmakedepends="pkg-config intltool qt5-host-tools quazip-devel"
+makedepends="sane-devel libpodofo-devel libjpeg-turbo-devel djvulibre-devel
+ libzip-devel libuuid-devel libxml++3.0-devel qtspell-devel poppler-qt5-devel
+ tesseract-ocr-devel enchant2-devel qt5-devel leptonica-devel"
+# depends=""
+short_desc="A Gtk/Qt front-end to tesseract-ocr"
+maintainer="Kartik Singh <kartik.ynwa@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/manisandro/gImageReader"
+distfiles="https://github.com/manisandro/gImageReader/archive/v${version}.tar.gz"
+checksum=8c78ca365ede6134797320f34611381fde0a77fae5b65c8820e1487d4d0c3161
