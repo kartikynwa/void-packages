@@ -1,0 +1,23 @@
+# Template file for 'qtspell'
+pkgname=qtspell
+version=0.9.0
+revision=1
+build_style=cmake
+hostmakedepends="pkg-config qt5-host-tools"
+makedepends="enchant2-devel iso-codes qt5-devel qt5-tools-devel doxygen"
+short_desc="Spell checking for Qt text widgets"
+maintainer="Kartik Singh <kartik.ynwa@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/manisandro/qtspell"
+distfiles="https://github.com/manisandro/qtspell/archive/${version}.tar.gz"
+checksum=49a5ab995c3150572c3c48989cd3e506b0c2d64b09d80fb5b30daa7325445635
+
+qtspell-devel_package() {
+	depends="${sourcepkg}>=${version}_${revision}"
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/lib/*.so
+	}
+}
