@@ -1,0 +1,37 @@
+From 4b1c31d14615470d4e45dddd85cc84e39424c3ad Mon Sep 17 00:00:00 2001
+From: Kartik Singh <kartik.ynwa@gmail.com>
+Date: Tue, 15 Sep 2020 20:10:48 +0530
+Subject: [PATCH] Add missing QUrl header
+
+---
+ qt/src/hocr/HOCROdtExporter.cc  | 1 +
+ qt/src/hocr/HOCRTextExporter.cc | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git qt/src/hocr/HOCROdtExporter.cc qt/src/hocr/HOCROdtExporter.cc
+index 183653c..8fc367d 100644
+--- qt/src/hocr/HOCROdtExporter.cc
++++ qt/src/hocr/HOCROdtExporter.cc
+@@ -29,6 +29,7 @@
+ #include <QDesktopServices>
+ #include <QFileInfo>
+ #include <QMessageBox>
++#include <QUrl>
+ #include <QUuid>
+ #include <QXmlStreamWriter>
+ #include <quazipfile.h>
+diff --git qt/src/hocr/HOCRTextExporter.cc qt/src/hocr/HOCRTextExporter.cc
+index f7c5a58..53992e8 100644
+--- qt/src/hocr/HOCRTextExporter.cc
++++ qt/src/hocr/HOCRTextExporter.cc
+@@ -28,6 +28,7 @@
+ #include <QFileInfo>
+ #include <QMessageBox>
+ #include <QTextStream>
++#include <QUrl>
+ 
+ bool HOCRTextExporter::run(const HOCRDocument* hocrdocument, QString& filebasename) {
+ 	QString suggestion = filebasename;
+-- 
+2.28.0
+
