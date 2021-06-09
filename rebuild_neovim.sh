@@ -3,7 +3,7 @@
 set -e
 
 echo "Rebasing branch on upstream master"
-git fetch
+git fetch upstream
 git rebase upstream/master
 
 version="0.5.0+$(date +%Y%m%d)"
