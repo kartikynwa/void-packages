@@ -1,6 +1,6 @@
 # Template file for 'neovim'
 pkgname=neovim
-version=0.5.0+20210529
+version=0.5.0+20210609
 revision=1
 wrksrc="${pkgname}-nightly"
 build_style=cmake
@@ -14,7 +14,7 @@ maintainer="Steve Prybylski <sa.prybylx@gmail.com>"
 license="Apache-2.0, custom:Vim"
 homepage="https://neovim.io"
 distfiles="https://github.com/neovim/neovim/archive/nightly.tar.gz"
-checksum=a17284b81a4f46a061640063a971f0f3827488a76a11a04a002997baedb6cc20
+checksum=7ef97db2fbc53ba7bfcc58bce3a404f7d45038c3ec921269daada12744c941ee
 
 alternatives="
  vi:vi:/usr/bin/nvim
