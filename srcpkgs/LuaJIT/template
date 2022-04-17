@@ -1,17 +1,17 @@
 # Template file for 'LuaJIT'
 pkgname=LuaJIT
 version=2.1.0beta3
-revision=2
+revision=3
 _so_version=2.1.0
 _dist_version=${_so_version}-beta3
-wrksrc="${pkgname}-${_dist_version}"
+wrksrc="${pkgname}-2.1"
 hostmakedepends="lua52-BitOp"
 short_desc="Just-In-Time Compiler for Lua"
 maintainer="q66 <daniel@octaforge.org>"
 license="MIT"
 homepage="http://www.luajit.org"
-distfiles="http://luajit.org/download/${pkgname}-${_dist_version}.tar.gz"
-checksum=1ad2e34b111c802f9d0cdf019e986909123237a28c746b21295b63c9e785d9c3
+distfiles="https://github.com/LuaJIT/LuaJIT/archive/ddb955376457461bbcc62d4c7fee86669adad20c.tar.gz"
+checksum=64f92aa8ae94920960786a06fdb077ff0b837fde231e8420d3fb6f4afc1e9441
 
 build_options="lua52compat"
 

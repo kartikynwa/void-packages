@@ -1,13 +1,11 @@
-From: =?utf-8?q?Ond=C5=99ej_Sur=C3=BD?= <ondrej@sury.org>
-Date: Tue, 17 Nov 2015 16:27:11 +0100
-Subject: Enable debugging symbols in the build
+commit 4f84e7f1f296d58d57cd3bd17345f216e626785e
+Author: Kartik Singh <kartik.ynwa@gmail.com>
+Date:   Sun Apr 17 22:54:21 2022 +0530
 
----
- src/Makefile | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+    Enable generating debug symbols
 
-diff --git src/Makefile src/Makefile
-index 8a38efd..6b73a89 100644
+diff --git a/src/Makefile b/src/Makefile
+index 30d64be2..751a88e1 100644
 --- a/src/Makefile
 +++ b/src/Makefile
 @@ -54,9 +54,9 @@ CCOPT_arm64=
