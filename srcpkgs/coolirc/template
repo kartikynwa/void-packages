@@ -1,0 +1,22 @@
+# Template file for 'senpai'.
+pkgname=coolirc
+version=0.0.1
+revision=1
+build_style=go
+go_import_path="git.sr.ht/~kartikynwa/coolirc"
+go_package="./cmd/coolirc"
+hostmakedepends="scdoc"
+short_desc="IRC client that works best with bouncers"
+maintainer="Kartik Singh <hello@ks.tld>"
+license="ISC"
+homepage="https://git.sr.ht/~kartikynwa/coolirc"
+distfiles="https://git.sr.ht/~kartikynwa/coolirc/archive/v${version}.tar.gz"
+checksum=0cea6f10f176e96d99d2c41973999e3ec9bc53ac04f6c83f674945dde85db7d4
+
+post_install() {
+	scdoc <doc/senpai.1.scd >doc/coolirc.1
+	scdoc <doc/senpai.5.scd >doc/coolirc.5
+	vman doc/coolirc.1
+	vman doc/coolirc.5
+	vlicense LICENSE
+}
