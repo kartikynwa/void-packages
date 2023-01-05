@@ -1,6 +1,6 @@
 # Template file for 'yambar'
 pkgname=yambar
-version=1.9.0
+version=1.9.1
 revision=1
 build_style=meson
 hostmakedepends="flex pkg-config scdoc wayland-devel"
@@ -12,10 +12,10 @@ checkdepends="xvfb-run liberation-fonts-ttf"
 short_desc="Modular status panel for X11 and Wayland, inspired by polybar"
 maintainer="travankor <travankor@tuta.io>"
 license="MIT"
-homepage="https://codeberg.org/dnkl/yambar"
-changelog="https://codeberg.org/dnkl/yambar/raw/branch/master/CHANGELOG.md"
-distfiles="https://codeberg.org/dnkl/yambar/archive/${version}.tar.gz"
-checksum=46f3002338f451c154678167bf3d5f593307954b6f381c50ddef2726b1a8c811
+homepage="https://codeberg.org/optimus-prime/yambar"
+changelog="https://codeberg.org/optimus-prime/yambar/raw/branch/master/CHANGELOG.md"
+distfiles="https://codeberg.org/optimus-prime/yambar/archive/${version}.tar.gz"
+checksum=f87005f21e310f23a35b8bdd6499492befe6ae24d5408fa854f694e3a6db31f6
 
 do_check() {
 	xvfb-run ninja -C build/ test
